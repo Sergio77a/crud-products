@@ -29,6 +29,15 @@ dependencies:
   '@angular/router':
     specifier: ^17.3.0
     version: 17.3.5(@angular/common@17.3.5)(@angular/core@17.3.5)(@angular/platform-browser@17.3.5)(rxjs@7.8.1)
+  primeflex:
+    specifier: ^3.3.1
+    version: 3.3.1
+  primeicons:
+    specifier: ^7.0.0
+    version: 7.0.0
+  primeng:
+    specifier: ^17.13.0
+    version: 17.13.0(@angular/common@17.3.5)(@angular/core@17.3.5)(@angular/forms@17.3.5)(rxjs@7.8.1)(zone.js@0.14.4)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -42,7 +51,7 @@ dependencies:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: ^17.3.3
-    version: 17.3.5(@angular/compiler-cli@17.3.5)(karma@6.4.3)(typescript@5.4.5)
+    version: 17.3.5(@angular/compiler-cli@17.3.5)(@types/node@20.12.7)(karma@6.4.3)(typescript@5.4.5)
   '@angular/cli':
     specifier: ^17.3.3
     version: 17.3.5
@@ -52,6 +61,9 @@ devDependencies:
   '@types/jasmine':
     specifier: ~5.1.0
     version: 5.1.4
+  '@types/node':
+    specifier: ^20.12.7
+    version: 20.12.7
   jasmine-core:
     specifier: ~5.1.0
     version: 5.1.2
@@ -94,7 +106,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@17.3.5(@angular/compiler-cli@17.3.5)(karma@6.4.3)(typescript@5.4.5):
+  /@angular-devkit/build-angular@17.3.5(@angular/compiler-cli@17.3.5)(@types/node@20.12.7)(karma@6.4.3)(typescript@5.4.5):
     resolution: {integrity: sha512-Ju2MkMidJglJq/iWgM9CNbhK7A/2n0LNYPZx+ucb+aOFWvurCQrU4Mt/es6xCsxOEs5OPhjqdva8mxE5FHwzTQ==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -194,7 +206,7 @@ packages:
       tslib: 2.6.2
       typescript: 5.4.5
       undici: 6.11.1
-      vite: 5.1.7(less@4.2.0)(sass@1.71.1)(terser@5.29.1)
+      vite: 5.1.7(@types/node@20.12.7)(less@4.2.0)(sass@1.71.1)(terser@5.29.1)
       watchpack: 2.4.0
       webpack: 5.90.3(esbuild@0.20.1)
       webpack-dev-middleware: 6.1.2(webpack@5.90.3)
@@ -2703,7 +2715,7 @@ packages:
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
     dependencies:
-      vite: 5.1.7(less@4.2.0)(sass@1.71.1)(terser@5.29.1)
+      vite: 5.1.7(@types/node@20.12.7)(less@4.2.0)(sass@1.71.1)(terser@5.29.1)
     dev: true
 
   /@webassemblyjs/ast@1.12.1:
@@ -5876,6 +5888,31 @@ packages:
       source-map-js: 1.2.0
     dev: true
 
+  /primeflex@3.3.1:
+    resolution: {integrity: sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==}
+    dev: false
+
+  /primeicons@7.0.0:
+    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
+    dev: false
+
+  /primeng@17.13.0(@angular/common@17.3.5)(@angular/core@17.3.5)(@angular/forms@17.3.5)(rxjs@7.8.1)(zone.js@0.14.4):
+    resolution: {integrity: sha512-TBNxLamNTfy2URjX3SoR8xVe+uLKxH+1mCIkiF/+yNEDv2hwcXvBNnESHnSO7yTYRc3wHBjU5XCjSWQE1RPDbQ==}
+    peerDependencies:
+      '@angular/common': ^17.0.0
+      '@angular/core': ^17.0.0
+      '@angular/forms': ^17.0.0
+      rxjs: ^6.0.0 || ^7.8.1
+      zone.js: ~0.14.0
+    dependencies:
+      '@angular/common': 17.3.5(@angular/core@17.3.5)(rxjs@7.8.1)
+      '@angular/core': 17.3.5(rxjs@7.8.1)(zone.js@0.14.4)
+      '@angular/forms': 17.3.5(@angular/common@17.3.5)(@angular/core@17.3.5)(@angular/platform-browser@17.3.5)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+      zone.js: 0.14.4
+    dev: false
+
   /proc-log@3.0.0:
     resolution: {integrity: sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -6931,7 +6968,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@5.1.7(less@4.2.0)(sass@1.71.1)(terser@5.29.1):
+  /vite@5.1.7(@types/node@20.12.7)(less@4.2.0)(sass@1.71.1)(terser@5.29.1):
     resolution: {integrity: sha512-sgnEEFTZYMui/sTlH1/XEnVNHMujOahPLGMxn1+5sIT45Xjng1Ec1K78jRP15dSmVgg5WBin9yO81j3o9OxofA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6959,6 +6996,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.12.7
       esbuild: 0.19.12
       less: 4.2.0
       postcss: 8.4.35

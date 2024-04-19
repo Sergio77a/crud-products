@@ -1,0 +1,67 @@
+
+
+<p-dialog
+header="{{modalType}} Product"
+[(visible)]="displayAddEditModal"
+
+
+[modal]="true" [style]="{ width: '50vw' }"
+[draggable]="false"
+[resizable]="false"
+(onHide)="closeModal()">
+
+  <form [formGroup]="productForm" class="product-form">
+
+    <div class="field">
+      <label class="block" for="title">Title</label>
+      <input type="text" pInputText formControlName="title" id="title"/>
+      <small class="p-error block" *ngIf="productForm.controls['title'].invalid && productForm.controls['title'].dirty">
+        Field is required
+      </small>
+    </div>
+
+
+    <div class="field">
+      <label class="block" for="price">Price</label>
+      <p-inputNumber inputId="integeronly" id="price" formControlName="price"></p-inputNumber>
+      <small class="p-error block" *ngIf="productForm.controls['price'].invalid && productForm.controls['price'].dirty">
+        Field is required
+      </small>
+
+
+    </div>
+
+
+    <div class="field">
+      <label class="block" for="description">Description</label>
+      <textarea rows="5" cols="30" pInputTextarea formControlName="description" id="description"></textarea>
+
+
+    </div>
+
+    <div class="field">
+      <label class="block" for="category">Category</label>
+      <input type="text"id="category" pInputText formControlName="category"/>
+      <small class="p-error block" *ngIf="productForm.controls['category'].invalid && productForm.controls['category'].dirty">
+        Field is required
+      </small>
+    </div>
+
+    <div class="field">
+      <label class="block" for="image">Image</label>
+      <input type="text" id="image" pInputText formControlName="image"/>
+      <small class="p-error block" *ngIf="productForm.controls['image'].invalid && productForm.controls['image'].dirty">
+        Field is required
+      </small>
+    </div>
+
+
+  </form>
+
+
+    <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="addEditProduct()" label="{{modalType}}" [disabled] ="productForm.invalid" ></p-button>
+      <p-button icon="pi pi-times" (click)="closeModal()" label="Cancel" ></p-button>
+
+  </ng-template>
+</p-dialog>

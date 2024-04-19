@@ -1,0 +1,11 @@
+<p-dialog header="Confirmación de eliminación" [(visible)]="displayDialogModal" [modal]="true" [responsive]="true" [style]="{width: '40vw'}
+"
+(onHide)="closeDialog()">
+  <p>
+    ¿Estás seguro/a de realizar esta acción?
+  </p>
+  <div class="p-dialog-footer">
+    <button pButton type="button" label="Confirmar" icon="pi pi-check" (click) = "deleteProduct()"></button>
+    <button pButton type="button" label="Cancelar" icon="pi pi-times" class="p-button-secondary" (click)="closeDialog()"></button>
+  </div>
+</p-dialog>
